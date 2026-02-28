@@ -1,17 +1,10 @@
 name = "kwave-ai-stage"
 main = "workers/gemini-proxy.ts"
 compatibility_date = "2024-01-01"
-compatibility_flags = ["nodejs_compat"]
+workers_dev = true
 
 [vars]
 # GEMINI_API_KEY is set via: npx wrangler secret put GEMINI_API_KEY
-
-[[routes]]
-pattern = "kwave-ai-stage.*.workers.dev/*"
-zone_name = "workers.dev"
-
-[build]
-command = ""
 
 # For Pages + Workers integration
 # Pages site is deployed separately via: npx wrangler pages deploy dist/
