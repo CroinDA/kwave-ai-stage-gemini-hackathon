@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { KDramaGenerator } from './components/KDramaGenerator';
 import { KPopConceptGenerator } from './components/KPopConceptGenerator';
 import { StoryArcExpander } from './components/StoryArcExpander';
+import { Pricing } from './components/Pricing';
 
 type Tab = 'kdrama' | 'kpop' | 'storyarc';
 
@@ -186,6 +187,10 @@ export default function App() {
         {activeTab === 'kdrama' && <KDramaGenerator />}
         {activeTab === 'kpop' && <KPopConceptGenerator />}
         {activeTab === 'storyarc' && <StoryArcExpander />}
+        
+        <div className="mt-20 pt-20 border-t border-[#3a1060]/50">
+          <Pricing />
+        </div>
       </main>
 
       <Footer />

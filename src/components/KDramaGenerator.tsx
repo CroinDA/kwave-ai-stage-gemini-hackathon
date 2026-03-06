@@ -219,6 +219,16 @@ export function KDramaGenerator() {
           </h3>
           {output && !isStreaming && (
             <div className="flex gap-2">
+              <button 
+                onClick={() => {
+                  console.log(`[CONVERSION_EXPERIMENT] User clicked Export PDF (Pro feature) in KDramaGenerator at ${new Date().toISOString()}`);
+                  alert('전문가용 [K-드라마 대본 포맷 PDF]는 Superstar(Pro) 플랜에서만 제공됩니다.\n\n지금 업그레이드하고 당신의 시나리오를 완성하세요!');
+                  document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                className="kwave-btn-secondary text-xs border-[#f0c040]/40 text-[#f0c040]/80 hover:bg-[#f0c040]/10"
+              >
+                📥 PDF 내보내기
+              </button>
               <button onClick={handleCopy} className="kwave-btn-secondary text-xs">📋 복사</button>
               <button onClick={handleReset} className="kwave-btn-secondary text-xs">🔄 초기화</button>
             </div>
